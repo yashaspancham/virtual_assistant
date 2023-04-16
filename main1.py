@@ -6,8 +6,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import Qt , QTimer ,QDate
 from PyQt5.uic import loadUiType
-import v2
-import v1
+#import v2
+#import v1
 import os
 import sys
 

@@ -45,7 +45,7 @@ class Gui_Start(QMainWindow):
 
         try:
             print("You said: " + said)
-            process(said)
+            #process(said)
     
         except sr.UnknownValueError:
             print("Google Speech Recognition could not understand audio")
@@ -57,7 +57,7 @@ class Gui_Start(QMainWindow):
             engine.say(said)
             engine.runAndWait()
         
-        startexec.start()
+ #       startexec.start()
         
         
     def showTimeLive(self):
@@ -69,7 +69,7 @@ class Gui_Start(QMainWindow):
         label_date="Date: " + date
         self.gui.text_time.setText(label_time) 
         self.gui.text_date.setText(label_date) 
-startexec=main1
+#startexec=main1
 guiapp=QApplication(sys.argv) 
 jarvis_gui=Gui_Start()
 jarvis_gui.show()
