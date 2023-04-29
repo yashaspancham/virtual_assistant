@@ -9,7 +9,7 @@ r = sr.Recognizer()
 
 with sr.Microphone() as source:
     print("Speak now...")
-    audio = r.listen(source, timeout=5, phrase_time_limit=5)#taking voice input
+    audio = r.listen(source, timeout=6, phrase_time_limit=5)#taking voice input
     try:
         print("Processing the voice input")
         said=r.recognize_google(audio)#converting audio input to text1
