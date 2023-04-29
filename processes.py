@@ -26,6 +26,7 @@ def process(said):
         k=1
     if said in ("tell me about a stock","can you tell me about a stock"," can you tell me about the stock","tell me about a stock"):
         stock_data.stock_data(said)
+        k=1
     if k==0:
         text="sorry I do not know how to do that"
         tts=gTTS(text=text,lang="en")
