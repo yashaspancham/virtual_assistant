@@ -17,7 +17,9 @@ def process(said):
     if(say[0]=="say"):
         saying.saying(said)
         k=1
-    #name.nname(said)
+    if said in ("tell me your name", "what is your name","hey whats your name","I dont think we have been introduced yet", "whats your name","can I get your name","hey remind me of your name","hi who are you","whats your name","what can I call you","what would your name be","what are you named","what do you call yourself","can I have your name"):
+        name.nname(said)
+        k=1
     if said in ("tell me a good joke","make me laugh","tell me a joke","joke about something"):
         jokes.jokes(said)
         k=1
@@ -26,8 +28,9 @@ def process(said):
         k=1
     if said in ("tell me about a stock","can you tell me about a stock"," can you tell me about the stock","tell me about a stock"):
         stock_data.stock_data(said)
+        k=1
     if k==0:
-        text="sorry I do not know how to do that"
+        text="sorry I do not know how to do that nor do I understand it"
         tts=gTTS(text=text,lang="en")
         tts.save("output.mp3")
         os.system("mpg123 error-126627.mp3")
